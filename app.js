@@ -43,7 +43,7 @@ sliders.forEach(slide => {
     })
  }
 
- window.addEventListener('load', (event) => {
-    console.log('page is fully loaded');
-  });
- menuToggle.addEventListener('click', menu);
+//  window.addEventListener('load', (event) => {
+//     console.log('page is fully loaded');
+//   });
+//  menuToggle.addEventListener('click', menu);
