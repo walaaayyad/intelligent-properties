@@ -103,6 +103,29 @@ body {
 .from-right.appear {
     transform: translateX(0);
 }
+
+/* scroll up btn */
+.scrollUpBtn {
+    opacity: 1;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    border: 3px solid var(--main-color);
+    color: var(--main-color);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.scrollUpBtn.hidden {
+    opacity: 0;
+}
 /************** About ****************/
 
 #about p {

@@ -33,6 +33,33 @@ sliders.forEach(slide => {
 })
 /* end animations for sections */
 
+/* start scroll up btn */
+const scrollUpBtn = document.querySelector('.scrollUpBtn');
+
+const scrollToTop = () => {
+    scrollUpBtn.classList.add('hidden');
+    window.scrollTo(0,0);
+  }
+
+const init= ()=> {
+    scrollUpBtn.classList.add('hidden');
+}
+
+const upBtnHandeler = ()=> {
+if(window.scrollY >= 70) {
+    scrollUpBtn.classList.remove('hidden');
+}else{
+    scrollUpBtn.classList.add('hidden');
+
+  }
+}
+
+window.addEventListener('load', init);   
+window.addEventListener('scroll', ()=> {
+    upBtnHandeler();
+  });
+
+/* start nav bar fixed issues */
  const navLinks = document.querySelectorAll('.nav-link')
  const menuToggle = document.getElementById('navbarNavDropdown')
  
