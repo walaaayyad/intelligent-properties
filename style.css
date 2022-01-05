@@ -1,0 +1,205 @@
+/************ Global ***************/
+:root {
+    --main-color : #F0A500;
+    --sec-color : #252525;
+}
+body {
+    font-family: serif;
+    overflow-x: hidden;
+}
+
+/************* Info ****************/
+.info-bar {
+    height: 40px; 
+    background-color: #272827;
+}
+.info-bar {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+/*********** Bootstrap btn **************/
+.btn {
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+.btn:hover {
+    color: #fff;
+    background-color: var(--main-color);
+}
+/************* nav *************/
+.navbar-brand span:first-child {
+    color: #fff;
+}
+.navbar-brand span:last-child {
+    margin-top: -10px;
+    color: #F0A500;
+}
+.navbar-expand-lg .navbar-collapse {
+    justify-content: end;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #fff !important;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--main-color) !important;
+}
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--main-color) !important;
+}
+.navbar-light .navbar-nav .nav-link.active::after,
+.navbar-light .navbar-nav .nav-link:hover::after {
+    width: 30px;
+    height: 1px;
+    margin: auto;
+    display: block;
+    content: '';
+    background-color: var(--main-color);
+}
+.navbar-light .navbar-toggler {
+    border-color: var(--main-color);
+}
+
+/************** header ***************/
+.header {
+    height: 95vh; 
+    background-image: url('./img/sun16.jpg');
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover; 
+    background-color: rgba(0, 0, 0, 0.6); 
+    background-blend-mode: darken;
+}
+.header-title {
+    height: inherit;
+    color: #fff;
+}
+.title {
+    font-size: 4rem;
+}
+.header-title p {
+    max-width: 50%;
+}
+.orang-color {
+    color: var(--main-color);
+}
+/* add animation for title */
+.from-left {
+    grid-column: 2 / 3;
+    transform: translateX(-50%);
+}
+.from-right {
+    grid-column: 3 / 4;
+    transform: translateX(50%);
+}
+.from-left,
+.from-right {
+    transition: transform 1s ease-in;
+}
+.from-left.appear,
+.from-right.appear {
+    transform: translateX(0);
+}
+/************** About ****************/
+
+#about p {
+    color: #000;
+}
+/************* Counter **************/
+.counter {
+    background-color: var(--sec-color);
+    color: #fff;
+    font-size: 1.2rem;
+    border-top: 5px double var(--main-color);
+    border-bottom: 5px double var(--main-color);
+}
+.counter span {
+    color: var(--main-color);
+    font-size: 2.5rem;
+}
+.counter p {
+    font-size: 15px;
+}
+.num {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    margin: 10px;
+    box-shadow: 1px 1px 3px var(--main-color);
+    color: var(--main-color);
+    margin: auto;
+}
+
+/********** Services *************/
+.chooseUs {
+    background-color: #eee;
+}
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+.fade-in.appear {
+    opacity: 1;
+}
+
+/***********  footer  **********/
+footer {
+    background-image: url("./img/spacesun.jpg");
+    background-repeat: round;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.6); 
+    background-blend-mode: darken;
+    color: #fff;
+}
+footer p {
+    max-width: 60%;
+}
+footer .rights {
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 650px) {
+    .navbar-light .navbar-nav .nav-link.active::after {
+        display: none;
+    }
+    .navbar-nav {
+        align-items: center;
+        background: rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255,255,255,0.2);
+            border-left: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(5px);
+            color: #fff;
+    }
+    .navbar-brand {
+        font-size: 0.9rem;
+    }
+    .navbar-brand span:last-child {
+        margin-top: -5px;
+    }
+    .header-title {
+        text-align: center;
+    }
+    .header-title p {
+        max-width: 100%;
+    }
+    .title {
+        font-size: 2rem;
+    }
+    .num {
+        width: 70%;
+    }
+    .border-end {
+        border-right: none !important;
+    }
+    .footer-text {
+        text-align: center;
+    }
+    .footer-text p {
+        max-width: 100%;
+    }
+}
