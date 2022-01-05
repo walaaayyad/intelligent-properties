@@ -28,6 +28,7 @@ body {
     background-color: var(--main-color);
 }
 /************* nav *************/
+
 .navbar-brand span:first-child {
     color: #fff;
 }
@@ -168,12 +169,13 @@ footer .rights {
         display: none;
     }
     .navbar-nav {
+        position: absolute;
+        width: 90%;
+        height: 70vh;
         align-items: center;
-        background: rgba(255, 255, 255, 0.1);
-            border-top: 1px solid rgba(255,255,255,0.2);
-            border-left: 1px solid rgba(255,255,255,0.2);
-            backdrop-filter: blur(5px);
-            color: #fff;
+        justify-content: center;
+        background-color: var(--sec-color);
+        z-index: 100;
     }
     .navbar-brand {
         font-size: 0.9rem;
@@ -201,5 +203,15 @@ footer .rights {
     }
     .footer-text p {
         max-width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    .header {
+        height: 94vh;
+    }
+    .header-title {
+        height: auto;
+        margin-top: 20px;
     }
 }

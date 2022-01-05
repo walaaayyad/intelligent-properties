@@ -32,3 +32,10 @@ sliders.forEach(slide => {
     appearOnScroll.observe(slide);
 })
 /* end animations for sections */
+
+const navLinks = document.querySelectorAll('.nav-link')
+const menuToggle = document.getElementById('navbarNavDropdown')
+const bsCollapse = new bootstrap.Collapse(menuToggle)
+navLinks.forEach((l) => {
+    l.addEventListener('click', () => { bsCollapse.toggle() })
+})
